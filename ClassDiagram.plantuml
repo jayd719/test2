@@ -1,0 +1,19 @@
+@startuml NeuralNetSim
+title Neural Network Simulator
+
+class Net{
+    +Net()
+    +feedForward()
+    +backProp()
+    +getResults()
+}
+
+class Layer{
+}
+
+class Neuron{}
+
+Net "1"--"3..*" Layer:contains
+Layer "1"--"1..*" Neuron:contains
+
+@enduml
